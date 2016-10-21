@@ -1,0 +1,9 @@
+input[type="radio"],
+input[type="radio"] + label{
+    width:14px;
+    height:14px;
+    horiz-align:center;
+    vert-align:middle;
+    outline: 0;
+    cursor:pointer;
+}

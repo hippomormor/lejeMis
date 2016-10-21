@@ -1,0 +1,82 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+    <body>
+        <div id="page">
+            <form>
+                    <div>
+                        <input  [(ngModel)]="myLejer.type" id="Privat" name="Privat" value="Privat" type="radio" >
+                        <label for="Privat">Privat</label>
+                    </div>
+                    <div>
+                        <input [(ngModel)]="myLejer.type"  id="Erhverv" name="Erhverv" value="Erhverv" type="radio">
+                        <label for="Erhverv">Erhverv</label>
+                    </div>
+            </form>
+            <form>
+                <br/>
+                <div>
+                    <label for="Email">E-mail</label>
+                    <div>
+                        <input [(ngModel)]="myLejer.email" placeholder="christian@hansen.dk" id="Email" name="Email" type="text">
+                    </div>
+                </div>
+                <br/>
+                <div>
+                    <label for="FirstName">Fornavn</label>
+                    <div>
+                        <input [(ngModel)]="myLejer.fornavn" placeholder="Christian" id="FirstName" name="FirstName" type="text">
+                    </div>
+                </div>
+                <br/>
+                <div>
+                    <label for="LastName">Efternavn
+                    </label>
+                    <div>
+                        <input [(ngModel)]="myLejer.efternavn" placeholder="Hansen" id="LastName" name="LastName" type="text">
+                    </div>
+                </div>
+                <br/>
+                <div>
+                    <label for="CVR/CPR">CPR/CVR</label>
+                    <div>
+                        <input [(ngModel)]="myLejer.identifikation" placeholder="1212851212" id="CVR/CPR" name="CVR/CPR" type="text">
+                    </div>
+                </div>
+                <br/>
+                <div>
+                    <label for="Address">Adresse (Vej)</label>
+                    <div>
+                        <input [(ngModel)]="myLejer.adresse.vej" placeholder="Holger Danskes Vej" id="Address" name="Address" type="text">
+                    </div>
+                </div>
+                <br/>
+                <div>
+                    <label for="AddressNr">Adresse (Nr.)</label>
+                    <div>
+                        <input [(ngModel)]="myLejer.adresse.nummer" placeholder="243 st th" id="AddressNr" name="AddressNr" type="text">
+                    </div>
+                </div>
+                <br/>
+                <div>
+                    <label for="Postnummer">Postnummer</label>
+                    <div>
+                        <input [(ngModel)]="myLejer.adresse.postnummer" placeholder="2100" id="Postnummer" name="Postnummer" type="text">
+                    </div>
+                </div>
+                <br/>
+                <div>
+                    <label for="Phone">Telefonnummer</label>
+                    <div>
+                        <input [(ngModel)]="myLejer.tlfNummer" placeholder="12345678"  id="Phone" name="Phone" type="text">
+                    </div>
+                </div>
+            </form>
+        <br/>
+            <div>
+                <button (click)="save()">Opret</button>
+            </div>
+        </div>
+    </body>
+</html>
