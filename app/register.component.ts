@@ -6,7 +6,7 @@ import {AppComponent}       from "./app.component"
 import {Lejer}              from "./lejer";
 
 import 'rxjs/add/operator/toPromise';
-import {LEJER} from "./mock-lejer";
+
 //import 'rxjs/Rx';
 
 @Component({
@@ -19,7 +19,6 @@ import {LEJER} from "./mock-lejer";
 export class RegisterComponent implements OnInit {
     private lejerURL = 'http://custom-env.huc3devb74.eu-central-1.elasticbeanstalk.com/api/lejer';
     private headers = new Headers({'Content-Type': 'application/json'});
-    private lej = LEJER;
     private myLejer = new Lejer();
 
     constructor(
@@ -36,8 +35,7 @@ export class RegisterComponent implements OnInit {
     }
 
     save(): void {
-       // if(this.lej.fornavn !== null)
-            this.create(this.myLejer);
+       this.create(this.myLejer);
     }
 
     create(lejer: Lejer): Promise<Lejer> {
