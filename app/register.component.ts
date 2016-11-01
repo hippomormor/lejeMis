@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
             .post(this.lejerURL, JSON.stringify(lejer), {headers: this.headers})
             .toPromise()
             .then(res => {
-                this.kontraktURL = this.lejerURL + "/" + res.text();
+                this.kontraktURL = this.lejerURL + res.text();
                 this.doneButton = true;
                 console.log(this.kontraktURL);
             })

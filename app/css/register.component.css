@@ -7,8 +7,3 @@ input[type="radio"] + label{
     outline: 0;
     cursor:pointer;
 }
-button {
-    horiz-align:center;
-    vert-align:middle;
-
-}
