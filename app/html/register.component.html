@@ -115,7 +115,8 @@
             </form>
             <br/>
             <div>
-                <button (click)="save()">Opret</button>
+                <button type="submit" (click)="save()">Opret</button>
+                <button type="button" (click)="goToContract()" *ngIf="doneButton">Se kontrakt</button>
             </div>
         </div>
     </body>
